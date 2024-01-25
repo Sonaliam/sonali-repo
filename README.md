@@ -1,7 +1,10 @@
 # sonali-repo
 
-#Requirements
+# Requirements
 
+Python 3
+
+Pytorch > 1.0
 
 # Training
 > `CUDA_VISIBLE_DEVICES=0 python code/main.py`
