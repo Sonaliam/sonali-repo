@@ -18,7 +18,6 @@ class Encoder(nn.Module):
         self.msatt_art = MultiHeadAttentionLayer(hid_dim, n_heads, dropout)
         self.self_attn_layer_norm = nn.LayerNorm(hid_dim)
 
-        self.layers = nn.ModuleList([EncoderLayer(hid_dim, n_heads, pf_dim, dropout) for _ in range(n_layers)])
         self.dropout = nn.Dropout(dropout)
         self.scale = torch.sqrt(torch.FloatTensor([hid_dim])).to(device)
 
